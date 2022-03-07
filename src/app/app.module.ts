@@ -4,15 +4,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { initializeApp } from "@firebase/app";
+import { environment } from 'src/environments/environment';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { reducers } from 'src/main/_store/reducers';
+import { DataEffects } from 'src/main/_effects/data.effects';
+import { AppService } from 'src/main/_services/_app.service';
+import { RootComponent } from 'src/main/components/root/root.component';
+
+initializeApp(environment.firebase);
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RootComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([DataEffects]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
