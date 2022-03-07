@@ -8,14 +8,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 new repository
 
-### VSC
-
-`ng new angular-firebase-template`
-
-`git remote add origin https://github.com/eksagono/angular-firebase-template.git`
-
-`git push -u origin master`
-
 ### Firebase
 
 `<link>` <http://console.firebase.google.com>
@@ -38,6 +30,12 @@ new repository
 	3. Create collection: demo/documentId/field:boolean = true
 
 ### VSC
+
+`ng new angular-firebase-template`
+
+`git remote add origin https://github.com/eksagono/angular-firebase-template.git`
+
+`git push -u origin master`
 
 `npm install firebase`
 
