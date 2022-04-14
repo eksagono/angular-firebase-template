@@ -1,11 +1,15 @@
 import { Injectable } from "@angular/core";
-import { getFirestore, collection, onSnapshot } from "@firebase/firestore";
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, onSnapshot } from "firebase/firestore";
 import { BehaviorSubject, Observable } from "rxjs";
-import { Model } from "../_models/model.model";
+import { environment } from "src/environments/environment";
+import { Model } from "src/main/_models/model.model";
 
 @Injectable()
 
 export class AppService {
+
+  private firebase = initializeApp(environment.firebase);
 
   constructor() { }
 
