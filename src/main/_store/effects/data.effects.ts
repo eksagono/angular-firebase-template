@@ -9,7 +9,7 @@ import { DataActions } from "src/main/_store/actions";
 export class DataEffects {
   constructor(
     private actions$: Actions,
-    private AppService: AppService,
+    private AppService: AppService
   ) { }
 
   LoadData$ = createEffect(() =>
