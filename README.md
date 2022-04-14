@@ -1,6 +1,6 @@
 # AngularFirebaseTemplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
 ## Steps
 
@@ -60,12 +60,6 @@ export const environment = {
 };
 ```
 
-app.module.ts
-
-```javascript
-initializeApp(environment.firebase);
-```
-
 tsconfig.json
 
 ```javascript
@@ -84,11 +78,11 @@ data structure
 
 	src
 		/main
-			/_effects
 			/_models
 			/_services
 			/_store
 				/actions
+			  /effects
 				/reducers
 				/selectors
 			/components
@@ -103,8 +97,6 @@ move to folder components
 			app.component.html
 			app-routing.module.ts
 		/main
-			/_effects
-				data.effects.ts
 			/_models
 				model.model.ts
 			/_services
@@ -113,9 +105,11 @@ move to folder components
 				/actions
 					index.ts
 					data.actions.ts
+        /effects
+          data.effects.ts
 				/reducers
 					index.ts
-					data.reducer.ts
+					data.reducer.ts [not used kept for legacy]
 				/selectors
 					index.ts
 					data.selectors.ts
