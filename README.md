@@ -105,8 +105,8 @@ move to folder components
 				/actions
 					index.ts
 					data.actions.ts
-        /effects
-          data.effects.ts
+				/effects
+					data.effects.ts
 				/reducers
 					index.ts
 					data.reducer.ts [not used kept for legacy]
