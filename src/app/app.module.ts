@@ -21,7 +21,7 @@ import { RootComponent } from 'src/main/components/root/root.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot(reducers),
+    StoreModule.forRoot({ store: reducers }),
     EffectsModule.forRoot([DataEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
