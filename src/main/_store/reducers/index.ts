@@ -1,21 +1,28 @@
 import { createReducer, on } from "@ngrx/store";
-import { Model } from "src/main/_models/model.model";
-import { DataActions } from "../actions";
+import { Data } from "src/main/_models/data.model";
+import { Settings } from "src/main/_models/settings.model";
+import { DataActions, SettingsActions } from "src/main/_store/actions";
 
 export interface AppState {
-  data: Model[];
+  settings: Settings,
+  data: Data[]
 }
 
 export const initialState: AppState = {
-  data: [],
+  settings: {} as Settings,
+  data: []
 }
 
 export const reducers = createReducer(
   initialState,
+  on(SettingsActions.LoadSettingsSuccess, (State, { settings }) => ({
+    ...State,
+    settings: settings,
+  })),
   on(DataActions.LoadDataSuccess, (State, { data }) => ({
     ...State,
     data: data,
-  })),
+  }))
 )
 
 // ***** for legacy ***** //

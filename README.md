@@ -82,7 +82,7 @@ data structure
 			/_services
 			/_store
 				/actions
-			  /effects
+				/effects
 				/reducers
 				/selectors
 			/components
@@ -98,21 +98,25 @@ move to folder components
 			app-routing.module.ts
 		/main
 			/_models
-				model.model.ts
+				data.model.ts
+				settings.model.ts
 			/_services
 				_app.service.ts
 			/_store
 				/actions
 					index.ts
 					data.actions.ts
+					settings.actions.ts
 				/effects
 					data.effects.ts
+					settings.effects.ts
 				/reducers
 					index.ts
 					data.reducer.ts [not used kept for legacy]
 				/selectors
 					index.ts
 					data.selectors.ts
+					settings.selectors.ts
 			/components
 				/root
 					root.component.ts

@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Model } from 'src/main/_models/model.model';
+import { Data } from 'src/main/_models/data.model';
 import { DataActions } from 'src/main/_store/actions';
 import { AppState } from 'src/main/_store/reducers';
 import { DataSelectors } from 'src/main/_store/selectors';
@@ -13,7 +13,7 @@ import { DataSelectors } from 'src/main/_store/selectors';
 })
 export class RootComponent implements OnInit, OnDestroy {
 
-  data$: Observable<Model[]> = this.store.pipe(select(DataSelectors.listData));
+  data$: Observable<Data[]> = this.store.pipe(select(DataSelectors.listData));
 
   constructor(
     private store: Store<AppState>

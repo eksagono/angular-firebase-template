@@ -12,6 +12,7 @@ import { reducers } from 'src/main/_store/reducers';
 import { DataEffects } from 'src/main/_store/effects/data.effects';
 import { AppService } from 'src/main/_services/_app.service';
 import { RootComponent } from 'src/main/components/root/root.component';
+import { SettingsEffects } from 'src/main/_store/effects/settings.effects';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { RootComponent } from 'src/main/components/root/root.component';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({ store: reducers }),
-    EffectsModule.forRoot([DataEffects]),
+    EffectsModule.forRoot([DataEffects, SettingsEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [AppService],

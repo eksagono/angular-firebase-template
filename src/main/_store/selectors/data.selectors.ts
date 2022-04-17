@@ -1,8 +1,8 @@
 import { createSelector } from "@ngrx/store";
-import { Model } from "src/main/_models/model.model";
+import { Data } from "src/main/_models/data.model";
 import { AppState } from "src/main/_store/reducers";
 
-const appState = (state: any) => state.store
+const appState = (state: any) => state.store;
 
 const listDataRaw = createSelector(
   appState,
@@ -11,5 +11,5 @@ const listDataRaw = createSelector(
 
 export const listData = createSelector(
   listDataRaw,
-  (listData: Model[]) => listData
+  (listData: Data[]) => listData
 );
