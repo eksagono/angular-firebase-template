@@ -15,14 +15,14 @@ new repository
 1. new project (disabled google analytics)
 2. new app web
 ```javascript
-	const firebaseConfig = {
-		apiKey: "AIzaSyDvCBriOkn2VtigtOeiqm-ix31-1TH6u38",
-		authDomain: "github-eksagono.firebaseapp.com",
-		projectId: "github-eksagono",
-		storageBucket: "github-eksagono.appspot.com",
-		messagingSenderId: "860421243193",
-		appId: "1:860421243193:web:773869d6d1c1edbc7068e8"
-	};
+const firebaseConfig = {
+	apiKey: "AIzaSyDvCBriOkn2VtigtOeiqm-ix31-1TH6u38",
+	authDomain: "github-eksagono.firebaseapp.com",
+	projectId: "github-eksagono",
+	storageBucket: "github-eksagono.appspot.com",
+	messagingSenderId: "860421243193",
+	appId: "1:860421243193:web:773869d6d1c1edbc7068e8"
+};
 ```
 3. Firestore Database
 	1. Create database
@@ -127,7 +127,7 @@ move to folder components
 page should display:
 
 ```html
-	root works!
+root works!
 
-	[ { "field": true, "uid": "Klyz2yjuT0YFzuuV6lU9" } ]
+[ { "field": true, "uid": "Klyz2yjuT0YFzuuV6lU9" } ]
 ```
