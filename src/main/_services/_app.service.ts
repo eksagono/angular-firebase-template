@@ -10,11 +10,11 @@ import { Settings } from "src/main/_models/settings.model";
 
 export class AppService {
 
-  private firebase = initializeApp(environment.firebase);
+  constructor() {
+    initializeApp(environment.firebase);
+  }
 
-  constructor() { }
-
-  getAll(): Observable<Data[]> { 
+  getAll(): Observable<Data[]> {
     return this.toObservable('demo')
   }
 
